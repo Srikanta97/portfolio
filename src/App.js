@@ -1,9 +1,10 @@
 import React from 'react';
+import About from './pages/About';
 
 function App() {
   return (
     <div>
-      <h1>UI and UX</h1>
+      <About />
     </div>
   );
 }
