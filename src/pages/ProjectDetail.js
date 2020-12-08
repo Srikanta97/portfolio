@@ -2,6 +2,9 @@ import React,{useState, useEffect} from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { ProjectState } from '../projectState';
+// Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animate';
 
 const ProjectDetail = () => {
     const history = useHistory();
@@ -17,7 +20,12 @@ const ProjectDetail = () => {
     return (
         <>
             {project && (
-                <Details>
+                <Details
+                    variants={pageAnimation}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                >
                     <Headline>
                         <h2>{project.title}</h2>
                         <img src={project.mainImg} alt="main" />
@@ -34,7 +42,7 @@ const ProjectDetail = () => {
                         })}
                     </Features>
                     <ImageDisplay>
-                        <img src={project.secondaryImg} alt="Image" />
+                        <img src={project.secondaryImg} alt="Another image from the project" />
                     </ImageDisplay>
                 </Details>
             )}
@@ -42,7 +50,7 @@ const ProjectDetail = () => {
     )
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
     color: white;
 `
 const Headline = styled.div`

@@ -4,22 +4,31 @@ import { Link } from 'react-router-dom';
 import music from '../img/music.png';
 import jobPortal from '../img/jobPortal.png';
 import portfolio from '../img/portfolio.png';
+// Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animate';
 
 const MyWork = () => {
     return (
-        <Work>
-            <Project>
-                <h2>Music Player</h2>
-                <div className="line"></div>
-                <Link to="/work/music-player" exact>
-                    <img src={music} alt="Home Page" />
-                </Link>
-            </Project>
+        <Work
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            style={{ backgroundColor: "#ececec"}}
+        >
             <Project>
                 <h2>Job Portal</h2>
                 <div className="line"></div>
                 <Link to="/work/job-portal" exact>
                     <img src={jobPortal} alt="Home Page" />
+                </Link>
+            </Project>
+            <Project>
+                <h2>Music Player</h2>
+                <div className="line"></div>
+                <Link to="/work/music-player" exact>
+                    <img src={music} alt="Home Page" />
                 </Link>
             </Project>
             <Project>
@@ -33,10 +42,10 @@ const MyWork = () => {
     );
 }
 
-const Work = styled.div`
+const Work = styled(motion.div)`
     min-height: 100vh;
     overflow: hidden;
-    padding: 5rem 5rem;
+    padding: 3rem 5rem;
 `
 
 const Project = styled.div`
