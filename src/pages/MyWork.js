@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, linked } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import music from '../img/music.png';
 import jobPortal from '../img/jobPortal.png';
 import portfolio from '../img/portfolio.png';
@@ -9,23 +9,23 @@ const MyWork = () => {
     return (
         <Work>
             <Project>
-                <h2>Job Portal</h2>
+                <h2>Music Player</h2>
                 <div className="line"></div>
-                <Link>
-                    <img src={jobPortal} alt="Home Page" />
+                <Link to="/work/music-player" exact>
+                    <img src={music} alt="Home Page" />
                 </Link>
             </Project>
             <Project>
-                <h2>Music Player</h2>
+                <h2>Job Portal</h2>
                 <div className="line"></div>
-                <Link>
-                    <img src={music} alt="Home Page" />
+                <Link to="/work/job-portal" exact>
+                    <img src={jobPortal} alt="Home Page" />
                 </Link>
             </Project>
             <Project>
                 <h2>My Portfolio</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/portfolio" exact>
                     <img src={portfolio} alt="Home Page" />
                 </Link>
             </Project>
@@ -50,7 +50,7 @@ const Project = styled.div`
         margin-bottom: 3rem;
     }
     img{
-        padding-left: 5rem;
+        padding: 0rem 4rem;
     }
 `
 

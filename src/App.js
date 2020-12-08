@@ -5,6 +5,7 @@ import MyWork from './pages/MyWork';
 import Nav from './components/Nav';
 import GlobalStyle from './components/GlobalStyle';
 import { Switch, Route } from 'react-router-dom';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
   return (
@@ -16,11 +17,14 @@ function App() {
         <Route path="/" exact>
           <About />
         </Route>
-        <Route path="/contact" exact>
-          <Contact />
-        </Route>
         <Route path="/work" exact>
           <MyWork />
+        </Route>
+        <Route path="/work/:id" exact>
+          <ProjectDetail />
+        </Route>
+        <Route path="/contact" exact>
+          <Contact />
         </Route>
       </Switch>
       
