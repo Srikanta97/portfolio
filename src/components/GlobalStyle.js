@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
 
    body{
        background: #1b1b1b;
-       font-family: 'Lato', sans-serif;
+       font-family: 'Inter', sans-serif;
+       /* font-family: 'Lobster', cursive; */
    }
 
    button{
@@ -35,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
            color: white;
        }
        h4{
+           font-size: 2rem;
            font-weight: bold;
        }
        span{

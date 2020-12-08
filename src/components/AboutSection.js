@@ -1,7 +1,9 @@
 import React from 'react';
-// import main from '../img/main.jpg';
 import main01 from '../img/main01.jpg';
+// import main from '../img/main.jpg';
+// import main02 from '../img/main02.jpg';
 import styled from 'styled-components';
+import { StyledAbout, StyledDescription, StyledHide, StyledImage } from '../style.js';
 
 const AboutSection = () => {
     return (
@@ -9,7 +11,7 @@ const AboutSection = () => {
             <StyledDescription>
                 <div className="title">
                     <StyledHide>
-                        <h2>My work is to make</h2>
+                        <h2>I work to make</h2>
                     </StyledHide>
                     <StyledHide>
                         <h2>your <span>UI</span> look</h2>
@@ -31,32 +33,8 @@ const AboutSection = () => {
     )
 }
 
-const StyledAbout = styled.div`
-    min-height: 90vh;
-    color:white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5rem 8rem;
-`
 
-const StyledDescription = styled.div`
-    flex: 1;
-    padding-right: 3rem;
-    h2{
-        font-weight: lighter;
-    }
-`
-const StyledImage = styled.div`
-    /* flex: 1; */
-    overflow: hidden;
-    img{
-        border-radius: 10px;
-    }
-`
 
-const StyledHide = styled.div`
-    overflow: hidden;
-` 
+ 
 
 export default AboutSection;
