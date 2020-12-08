@@ -6,7 +6,7 @@ export const StyledAbout = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 5rem;
+    padding: 3rem 6rem;
 `;
 export const StyledDescription = styled.div`
     flex: 1;

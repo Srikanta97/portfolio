@@ -1,8 +1,5 @@
 import React from 'react';
 import main01 from '../img/main01.jpg';
-// import main from '../img/main.jpg';
-// import main02 from '../img/main02.jpg';
-import styled from 'styled-components';
 import { StyledAbout, StyledDescription, StyledHide, StyledImage } from '../style.js';
 
 const AboutSection = () => {
@@ -14,7 +11,7 @@ const AboutSection = () => {
                         <h2>I work to make</h2>
                     </StyledHide>
                     <StyledHide>
-                        <h2>your <span>UI</span> look</h2>
+                        <h2>your <span>UI</span> look visually</h2>
                     </StyledHide>
                     <StyledHide>
                         <h2>stunning!</h2>
@@ -27,14 +24,10 @@ const AboutSection = () => {
                 <button>Contact me</button>
             </StyledDescription>
             <StyledImage>
-                <img src={main01} alt="main.jpg" />
+                <img src={main01} alt="main01.jpg" />
             </StyledImage>
         </StyledAbout>
     )
 }
-
-
-
- 
 
 export default AboutSection;

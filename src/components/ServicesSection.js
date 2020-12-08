@@ -3,15 +3,15 @@ import efficient from '../img/efficient.svg';
 import affordable from '../img/affordable.svg';
 import prograde from '../img/pro-grade.svg';
 import collab from '../img/collab.svg';
-import main2 from '..//img/main2.jpg';
+import servicesSection from '..//img/servicesSection.jpeg';
 import { StyledAbout, StyledDescription, StyledImage } from '../style.js';
 import styled from 'styled-components';
 
 const ServicesSection = () => {
     return (
         <StyledServices>
-            <StyledDescription>
-                <h2>High <span>quality</span> service!</h2>
+            <StyledDesc>
+                <h2><span>Flagship</span> webapps!</h2>
                 <Cards>
                     <Card>
                         <div className="icon">
@@ -42,15 +42,18 @@ const ServicesSection = () => {
                         <p>Lorem ipsum dolor sit amet.</p>
                     </Card>
                 </Cards>
-            </StyledDescription>
+            </StyledDesc>
             <StyledImage>
-                <img src={main2} />
+                <img style={{paddingLeft:"3rem",paddingRight:"1rem"}} src={servicesSection} />
             </StyledImage>
         </StyledServices>
     );
 }
 
 const StyledServices = styled(StyledAbout)`
+    padding: 3rem 3rem;
+    flex-direction: row-reverse;
+    align-items: flex-start;
     h2{
         padding: 0 3rem 5rem 0;
     }
@@ -60,13 +63,18 @@ const StyledServices = styled(StyledAbout)`
     }
 `;
 
+const StyledDesc = styled(StyledDescription)`
+    padding-left: 12rem;
+    padding-right: 0rem;
+`
+
 const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
 
 const Card = styled.div`
-    flex-basis: 20rem;
+    flex-basis: 17rem;
     .icon{
         display: flex;
         align-items: center;
